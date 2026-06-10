@@ -1,20 +1,19 @@
 from fastapi import FastAPI
 from backend.ingest import ingest_note
 from backend.search import search_chunks
+from backend.vector_store import add_chunks_to_chroma, semantic_search
 
 app = FastAPI()
 
 # break into chunks 
-def chunk_text(text, chunk_size=200, overlap=50):
+def chunk_text(text):
+    paragraphs = text.split("\n\n")
     chunks = []
-    start = 0
+    for paragraph in paragraphs:
+        cleaned = paragraph.strip()
 
-    while start < len(text):
-        end = start + chunk_size
-        chunk = text[start:end]
-        chunks.append(chunk)
-        start += chunk_size - overlap
-
+        if cleaned != "":
+            chunks.append(cleaned)
     return chunks
 
 # main route 
@@ -60,4 +59,23 @@ def search(query: str):
         "query": query,
         "num_results": len(results),
         "results": results
+    }
+
+@app.get("/vectorize")
+def vectorize():
+    num_chunks = add_chunks_to_chroma()
+
+    return {
+        "message": "Chunks added to ChromaDB!",
+        "num_chunks": num_chunks
+    }
+
+
+@app.get("/semantic-search")
+def semantic_search_route(query: str):
+    results = semantic_search(query)
+
+    return {
+        "query": query,
+        "documents": results["documents"][0]
     }

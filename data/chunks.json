@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "text": "Amazon Bedrock is an AWS service that lets developers build generative AI applications using foundation models.\n\nAmazon SageMaker is an AWS service used to build, train, and deploy machine learning mo",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 1,
+        "text": "ed to build, train, and deploy machine learning models.\n\nRAG stands for Retrieval Augmented Generation. It helps AI systems answer questions using external documents.",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 2,
+        "text": "ernal documents.",
+        "source": "data/aws.txt"
+    }
+]
