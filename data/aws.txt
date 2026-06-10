@@ -1,0 +1,5 @@
+Amazon Bedrock is an AWS service that lets developers build generative AI applications using foundation models.
+
+Amazon SageMaker is an AWS service used to build, train, and deploy machine learning models.
+
+RAG stands for Retrieval Augmented Generation. It helps AI systems answer questions using external documents.
