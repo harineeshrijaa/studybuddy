@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from backend.ingest import ingest_note
 from backend.search import search_chunks
 from backend.vector_store import add_chunks_to_chroma, semantic_search
+from backend.rag import answer_question
 
 app = FastAPI()
 
@@ -79,3 +80,7 @@ def semantic_search_route(query: str):
         "query": query,
         "documents": results["documents"][0]
     }
+
+@app.get("/ask")
+def ask(query: str):
+    return answer_question(query)
