@@ -1,10 +1,23 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
-from backend.ingest import ingest_note
+from backend.ingest import ingest_all_notes
 from backend.search import search_chunks
 from backend.vector_store import add_chunks_to_chroma, semantic_search
-from backend.rag import answer_question
+from backend.rag import answer_question, generate_study_guide
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    print("Building StudyBuddy knowledge base...")
+
+    chunks = ingest_all_notes()
+    add_chunks_to_chroma()
+
+    print(f"Knowledge base ready with {len(chunks)} chunks.")
+
+    yield
+
+
+app = FastAPI(lifespan=lifespan)
 
 # break into chunks 
 def chunk_text(text):
@@ -44,7 +57,7 @@ def get_chunks():
 
 @app.get("/ingest")
 def ingest():
-    chunks = ingest_note("data/aws.txt")
+    chunks = ingest_all_notes("data")
 
     return {
         "message": "Note ingested successfully!",
@@ -84,3 +97,7 @@ def semantic_search_route(query: str):
 @app.get("/ask")
 def ask(query: str):
     return answer_question(query)
+
+@app.get("/study-guide")
+def study_guide(topic: str):
+    return generate_study_guide(topic)

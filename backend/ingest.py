@@ -1,32 +1,40 @@
 import json
+import os
 
-def chunk_text(text, chunk_size=200, overlap=50):
+def chunk_text(text):
+    paragraphs = text.split("\n\n")
     chunks = []
-    start = 0
 
-    while start < len(text):
-        end = start + chunk_size
-        chunk = text[start:end]
-        chunks.append(chunk)
-        start += chunk_size - overlap
+    for paragraph in paragraphs:
+        cleaned = paragraph.strip()
+
+        if cleaned != "":
+            chunks.append(cleaned)
 
     return chunks
 
 
-def ingest_note(file_path):
-    with open(file_path, "r") as file:
-        content = file.read()
-
-    chunks = chunk_text(content)
-
+def ingest_all_notes(folder_path="data"):
     chunk_data = []
+    chunk_id = 0
 
-    for i, chunk in enumerate(chunks):
-        chunk_data.append({
-            "id": i,
-            "text": chunk,
-            "source": file_path
-        })
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(folder_path, filename)
+            with open(file_path, "r") as file:
+                content = file.read()
+
+            chunks = chunk_text(content)
+
+            for chunk in chunks:
+                chunk_data.append({
+                    "id": chunk_id,
+                    "text": chunk,
+                    "source": file_path
+                })
+                chunk_id += 1
+
+    
 
     with open("data/chunks.json", "w") as file:
         json.dump(chunk_data, file, indent=4)

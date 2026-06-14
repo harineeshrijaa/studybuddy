@@ -38,3 +38,47 @@ Question:
         "answer": response.text,
         "sources": documents
     }
+
+def generate_study_guide(topic):
+    results = semantic_search(topic, num_results=5)
+    documents = results["documents"][0]
+
+    context = "\n\n".join(documents)
+
+    prompt = f"""
+You are StudyBuddy, a helpful AI study assistant.
+
+Create a clear, beginner-friendly study guide using ONLY the notes provided below.
+
+The study guide should include:
+1. A short overview of the topic
+2. Key concepts and definitions
+3. Important details to remember
+4. Common confusion points or comparisons, if the notes support them
+5. A quick summary
+6. 3 practice questions
+
+Rules:
+- Use only the provided notes.
+- Do not add outside information.
+- If the notes do not contain enough information, say what is missing.
+- Keep the explanation clear and organized.
+- Do not assume the topic is about programming unless the notes show that.
+
+Notes:
+{context}
+
+Topic:
+{topic}
+"""
+
+    response = client.models.generate_content(
+        model="gemini-3.5-flash",
+        contents=prompt
+    )
+
+    return {
+        "topic": topic,
+        "study_guide": response.text,
+        "sources": documents
+    }

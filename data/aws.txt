@@ -1,5 +1,129 @@
-Amazon Bedrock is an AWS service that lets developers build generative AI applications using foundation models.
+# AWS Certified AI Practitioner (AIF-C01) Study Guide
+# Core Services & High-Yield Exam Catchphrases
 
-Amazon SageMaker is an AWS service used to build, train, and deploy machine learning models.
+========================================================================
+1. FLAGSHIP AI PLATFORMS (THE BIG TWO)
+========================================================================
 
-RAG stands for Retrieval Augmented Generation. It helps AI systems answer questions using external documents.
+* Amazon Bedrock
+  - Core Purpose: Serverless platform to access pre-trained Foundation Models (FMs) like Anthropic Claude, Meta Llama, and Amazon Nova/Titan via a single unified API.
+  - Exam Catchphrases:
+    * "Minimal operational overhead"
+    * "Serverless access to existing pre-built LLMs"
+    * "Deploy a generative AI RAG agent quickly using company text logs"
+
+* Amazon SageMaker AI
+  - Core Purpose: A comprehensive end-to-end environment to build, custom-train, tune, and deploy your own machine learning models from scratch.
+  - Exam Catchphrases:
+    * "Full control over the model lifecycle"
+    * "Train custom machine learning algorithms on proprietary data"
+    * "Hyperparameter tuning, data labeling, and custom model deployments"
+
+--- CRUCIAL SUB-FEATURES TO KNOW ---
+* SageMaker Canvas: Built for business analysts. Allows you to build ML models and predict outcomes using a visual, 100% code-free interface.
+* SageMaker JumpStart: A built-in hub inside SageMaker to browse, test, and deploy pre-trained open-source models with a single click.
+* SageMaker Clarify: Provides model explainability (answers "why did the model make this choice?") and uncovers underlying biases in datasets.
+* Bedrock Guardrails: Implements responsible AI boundaries by blocking specific toxic keywords, filtering inputs, or masking hidden PII (like SSNs).
+
+========================================================================
+2. GENERATIVE AI ASSISTANTS (AMAZON Q)
+========================================================================
+
+* Amazon Q Business
+  - Core Purpose: An AI assistant connected directly to your internal enterprise systems to chat, summarize, and write reports using internal company documents.
+  - Exam Catchphrases:
+    * "Enterprise knowledge assistant"
+    * "Sync with internal wikis, S3 buckets, Salesforce, or Slack"
+    * "Ask questions about internal corporate travel policy or HR wikis"
+
+* Amazon Q Developer
+  - Core Purpose: An AI assistant designed explicitly to answer software development questions, write code, run line-by-line debugging, and handle migrations.
+  - Exam Catchphrases:
+    * "AI coding companion inside the IDE or code editor"
+    * "Automatically generate unit tests"
+    * "Explain complex or legacy code structures to developers"
+
+========================================================================
+3. PRE-TRAINED LANGUAGE & NATURAL LANGUAGE PROCESSING (NLP)
+========================================================================
+
+* Amazon Comprehend
+  - Core Purpose: An NLP service that extracts insights, trends, patterns, and emotional undertones from raw, unorganized textual documentation.
+  - Exam Catchphrases:
+    * "Customer product review sentiment analysis"
+    * "Detect positive, negative, or neutral phrasing in customer text"
+    * "Automatically group customer support tickets by topic or issue"
+
+* Amazon Textract
+  - Core Purpose: A computer vision service that treats documents as structures, isolating and pulling tables, fields, or checkboxes from scanned PDFs or photos.
+  - Exam Catchphrases:
+    * "Read scanned tax documents, invoices, or medical forms"
+    * "Extract rows and columns from physical invoice images without manual input"
+    * "Eliminate manual paper data-entry queues"
+
+* Amazon Translate
+  - Core Purpose: A deep learning translation engine providing accurate, localized text processing across global languages.
+  - Exam Catchphrases:
+    * "Real-time multi-language customer chat translation"
+    * "Translate standard website layouts automatically for regional users"
+
+* Amazon Kendra
+  - Core Purpose: An intelligent natural language search index that crawls multiple separated file systems to find matching target documents.
+  - Exam Catchphrases:
+    * "Intelligent natural language keyword index search"
+    * "Search across isolated enterprise file servers and local drives"
+    * NOTE: If generating an answer, choose Q Business. If locating a file, choose Kendra.
+
+========================================================================
+4. SPEECH & CONVERSATIONAL AI
+========================================================================
+
+* Amazon Transcribe
+  - Core Purpose: An Automatic Speech Recognition (ASR) system that converts audio formats into readable, timestamped text files.
+  - Exam Catchphrases:
+    * "Convert recorded customer audio calls to text transcripts"
+    * "Generate closed captioning files for video media"
+    * "Ingest call center phone streams for text sentiment evaluations"
+
+* Amazon Polly
+  - Core Purpose: A natural-sounding text-to-speech engine that converts written articles and copy into streaming vocal tracks.
+  - Exam Catchphrases:
+    * "Generate lifelike spoken audio tracks from static text"
+    * "Add audio narrator features directly into mobile apps"
+    * "Power interactive IVR automated customer calling voice paths"
+
+* Amazon Lex
+  - Core Purpose: The conversational build kit that interprets intent using speech and text inputs (uses the same engine powering Amazon Alexa).
+  - Exam Catchphrases:
+    * "Build automated self-service conversational chatbots"
+    * "Create automated banking, booking, or scheduling text agents"
+    * "Handle initial level-0 support phone and chat workflows"
+
+========================================================================
+5. COMPUTER VISION & SPECIALIZED BUSINESS INSIGHTS
+========================================================================
+
+* Amazon Rekognition
+  - Core Purpose: An advanced computer vision platform to analyze, classify, and isolate items, landmarks, facial geometries, or text across photos and video clips.
+  - Exam Catchphrases:
+    * "Detect explicit, inappropriate, or unsafe user-uploaded images"
+    * "Facial mapping authentication or verification systems"
+    * "Catalog specific objects, tracking tags, and products within video feeds"
+
+* Amazon Personalize
+  - Core Purpose: A prediction engine that tracks browser paths and user activities to build custom item layouts, suggestions, and tailored recommendations.
+  - Exam Catchphrases:
+    * "Curate personalized product recommendations (e-commerce storefronts)"
+    * "Amazon-style 'recommended for you' boxes or custom landing pages"
+
+* Amazon Forecast
+  - Core Purpose: A statistical tool used to project future sequences based on patterns found within historical time-series datasets.
+  - Exam Catchphrases:
+    * "Predict inventory demand curves for upcoming fiscal quarters"
+    * "Forecast retail supply needs based on historical parameters"
+
+========================================================================
+💡 QUICK-SELECTION MENTAL MODEL FOR EXAM DAY
+========================================================================
+• If the question calls for a solution with "minimal operational overhead," "fast deployment," or "no formal ML expertise" -> Default to Amazon Bedrock or a managed service (Comprehend, Rekognition, Textract, etc.).
+• If the prompt explicitly mentions "maximum granular control," "custom feature engineering," "building custom models," or "tuning proprietary underlying code algorithms" -> Your absolute answer is Amazon SageMaker AI.

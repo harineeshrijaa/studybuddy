@@ -1,0 +1,5 @@
+Python lists are ordered collections that can store multiple values.
+
+Python dictionaries store key-value pairs and are similar to Java HashMaps.
+
+Python strings are immutable, meaning they cannot be changed after creation.

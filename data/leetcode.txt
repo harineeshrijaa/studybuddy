@@ -1,0 +1,5 @@
+In Python, enumerate is useful when you need both the index and value while looping.
+
+A while loop is useful when you need to manually control the index, such as skipping characters.
+
+Dictionaries are commonly used for frequency counting in LeetCode problems.

@@ -1,17 +1,142 @@
 [
     {
         "id": 0,
-        "text": "Amazon Bedrock is an AWS service that lets developers build generative AI applications using foundation models.\n\nAmazon SageMaker is an AWS service used to build, train, and deploy machine learning mo",
+        "text": "# AWS Certified AI Practitioner (AIF-C01) Study Guide\n# Core Services & High-Yield Exam Catchphrases",
         "source": "data/aws.txt"
     },
     {
         "id": 1,
-        "text": "ed to build, train, and deploy machine learning models.\n\nRAG stands for Retrieval Augmented Generation. It helps AI systems answer questions using external documents.",
+        "text": "========================================================================\n1. FLAGSHIP AI PLATFORMS (THE BIG TWO)\n========================================================================",
         "source": "data/aws.txt"
     },
     {
         "id": 2,
-        "text": "ernal documents.",
+        "text": "* Amazon Bedrock\n  - Core Purpose: Serverless platform to access pre-trained Foundation Models (FMs) like Anthropic Claude, Meta Llama, and Amazon Nova/Titan via a single unified API.\n  - Exam Catchphrases:\n    * \"Minimal operational overhead\"\n    * \"Serverless access to existing pre-built LLMs\"\n    * \"Deploy a generative AI RAG agent quickly using company text logs\"",
         "source": "data/aws.txt"
+    },
+    {
+        "id": 3,
+        "text": "* Amazon SageMaker AI\n  - Core Purpose: A comprehensive end-to-end environment to build, custom-train, tune, and deploy your own machine learning models from scratch.\n  - Exam Catchphrases:\n    * \"Full control over the model lifecycle\"\n    * \"Train custom machine learning algorithms on proprietary data\"\n    * \"Hyperparameter tuning, data labeling, and custom model deployments\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 4,
+        "text": "--- CRUCIAL SUB-FEATURES TO KNOW ---\n* SageMaker Canvas: Built for business analysts. Allows you to build ML models and predict outcomes using a visual, 100% code-free interface.\n* SageMaker JumpStart: A built-in hub inside SageMaker to browse, test, and deploy pre-trained open-source models with a single click.\n* SageMaker Clarify: Provides model explainability (answers \"why did the model make this choice?\") and uncovers underlying biases in datasets.\n* Bedrock Guardrails: Implements responsible AI boundaries by blocking specific toxic keywords, filtering inputs, or masking hidden PII (like SSNs).",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 5,
+        "text": "========================================================================\n2. GENERATIVE AI ASSISTANTS (AMAZON Q)\n========================================================================",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 6,
+        "text": "* Amazon Q Business\n  - Core Purpose: An AI assistant connected directly to your internal enterprise systems to chat, summarize, and write reports using internal company documents.\n  - Exam Catchphrases:\n    * \"Enterprise knowledge assistant\"\n    * \"Sync with internal wikis, S3 buckets, Salesforce, or Slack\"\n    * \"Ask questions about internal corporate travel policy or HR wikis\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 7,
+        "text": "* Amazon Q Developer\n  - Core Purpose: An AI assistant designed explicitly to answer software development questions, write code, run line-by-line debugging, and handle migrations.\n  - Exam Catchphrases:\n    * \"AI coding companion inside the IDE or code editor\"\n    * \"Automatically generate unit tests\"\n    * \"Explain complex or legacy code structures to developers\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 8,
+        "text": "========================================================================\n3. PRE-TRAINED LANGUAGE & NATURAL LANGUAGE PROCESSING (NLP)\n========================================================================",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 9,
+        "text": "* Amazon Comprehend\n  - Core Purpose: An NLP service that extracts insights, trends, patterns, and emotional undertones from raw, unorganized textual documentation.\n  - Exam Catchphrases:\n    * \"Customer product review sentiment analysis\"\n    * \"Detect positive, negative, or neutral phrasing in customer text\"\n    * \"Automatically group customer support tickets by topic or issue\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 10,
+        "text": "* Amazon Textract\n  - Core Purpose: A computer vision service that treats documents as structures, isolating and pulling tables, fields, or checkboxes from scanned PDFs or photos.\n  - Exam Catchphrases:\n    * \"Read scanned tax documents, invoices, or medical forms\"\n    * \"Extract rows and columns from physical invoice images without manual input\"\n    * \"Eliminate manual paper data-entry queues\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 11,
+        "text": "* Amazon Translate\n  - Core Purpose: A deep learning translation engine providing accurate, localized text processing across global languages.\n  - Exam Catchphrases:\n    * \"Real-time multi-language customer chat translation\"\n    * \"Translate standard website layouts automatically for regional users\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 12,
+        "text": "* Amazon Kendra\n  - Core Purpose: An intelligent natural language search index that crawls multiple separated file systems to find matching target documents.\n  - Exam Catchphrases:\n    * \"Intelligent natural language keyword index search\"\n    * \"Search across isolated enterprise file servers and local drives\"\n    * NOTE: If generating an answer, choose Q Business. If locating a file, choose Kendra.",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 13,
+        "text": "========================================================================\n4. SPEECH & CONVERSATIONAL AI\n========================================================================",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 14,
+        "text": "* Amazon Transcribe\n  - Core Purpose: An Automatic Speech Recognition (ASR) system that converts audio formats into readable, timestamped text files.\n  - Exam Catchphrases:\n    * \"Convert recorded customer audio calls to text transcripts\"\n    * \"Generate closed captioning files for video media\"\n    * \"Ingest call center phone streams for text sentiment evaluations\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 15,
+        "text": "* Amazon Polly\n  - Core Purpose: A natural-sounding text-to-speech engine that converts written articles and copy into streaming vocal tracks.\n  - Exam Catchphrases:\n    * \"Generate lifelike spoken audio tracks from static text\"\n    * \"Add audio narrator features directly into mobile apps\"\n    * \"Power interactive IVR automated customer calling voice paths\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 16,
+        "text": "* Amazon Lex\n  - Core Purpose: The conversational build kit that interprets intent using speech and text inputs (uses the same engine powering Amazon Alexa).\n  - Exam Catchphrases:\n    * \"Build automated self-service conversational chatbots\"\n    * \"Create automated banking, booking, or scheduling text agents\"\n    * \"Handle initial level-0 support phone and chat workflows\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 17,
+        "text": "========================================================================\n5. COMPUTER VISION & SPECIALIZED BUSINESS INSIGHTS\n========================================================================",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 18,
+        "text": "* Amazon Rekognition\n  - Core Purpose: An advanced computer vision platform to analyze, classify, and isolate items, landmarks, facial geometries, or text across photos and video clips.\n  - Exam Catchphrases:\n    * \"Detect explicit, inappropriate, or unsafe user-uploaded images\"\n    * \"Facial mapping authentication or verification systems\"\n    * \"Catalog specific objects, tracking tags, and products within video feeds\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 19,
+        "text": "* Amazon Personalize\n  - Core Purpose: A prediction engine that tracks browser paths and user activities to build custom item layouts, suggestions, and tailored recommendations.\n  - Exam Catchphrases:\n    * \"Curate personalized product recommendations (e-commerce storefronts)\"\n    * \"Amazon-style 'recommended for you' boxes or custom landing pages\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 20,
+        "text": "* Amazon Forecast\n  - Core Purpose: A statistical tool used to project future sequences based on patterns found within historical time-series datasets.\n  - Exam Catchphrases:\n    * \"Predict inventory demand curves for upcoming fiscal quarters\"\n    * \"Forecast retail supply needs based on historical parameters\"",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 21,
+        "text": "========================================================================\n\ud83d\udca1 QUICK-SELECTION MENTAL MODEL FOR EXAM DAY\n========================================================================\n\u2022 If the question calls for a solution with \"minimal operational overhead,\" \"fast deployment,\" or \"no formal ML expertise\" -> Default to Amazon Bedrock or a managed service (Comprehend, Rekognition, Textract, etc.).\n\u2022 If the prompt explicitly mentions \"maximum granular control,\" \"custom feature engineering,\" \"building custom models,\" or \"tuning proprietary underlying code algorithms\" -> Your absolute answer is Amazon SageMaker AI.",
+        "source": "data/aws.txt"
+    },
+    {
+        "id": 22,
+        "text": "Python lists are ordered collections that can store multiple values.",
+        "source": "data/python_basics.txt"
+    },
+    {
+        "id": 23,
+        "text": "Python dictionaries store key-value pairs and are similar to Java HashMaps.",
+        "source": "data/python_basics.txt"
+    },
+    {
+        "id": 24,
+        "text": "Python strings are immutable, meaning they cannot be changed after creation.",
+        "source": "data/python_basics.txt"
+    },
+    {
+        "id": 25,
+        "text": "In Python, enumerate is useful when you need both the index and value while looping.",
+        "source": "data/leetcode.txt"
+    },
+    {
+        "id": 26,
+        "text": "A while loop is useful when you need to manually control the index, such as skipping characters.",
+        "source": "data/leetcode.txt"
+    },
+    {
+        "id": 27,
+        "text": "Dictionaries are commonly used for frequency counting in LeetCode problems.",
+        "source": "data/leetcode.txt"
     }
 ]

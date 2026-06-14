@@ -2,10 +2,22 @@ import json
 import chromadb
 
 client = chromadb.PersistentClient(path="data/chroma_db")
-collection = client.get_or_create_collection(name="study_notes")
+
+def get_collection():
+    return client.get_or_create_collection(name="study_notes")
+
+
+def reset_collection():
+    try:
+        client.delete_collection(name="study_notes")
+    except:
+        pass
+
+    return client.get_or_create_collection(name="study_notes")
 
 
 def add_chunks_to_chroma():
+    collection = reset_collection()
     with open("data/chunks.json", "r") as file:
         chunks = json.load(file)
 
@@ -20,6 +32,7 @@ def add_chunks_to_chroma():
 
 
 def semantic_search(query, num_results=1):
+    collection = get_collection()
     results = collection.query(
         query_texts=[query],
         n_results=num_results
