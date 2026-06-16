@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
-// Base URL for your FastAPI backend
-const API_BASE = 'http://127.0.0.1:8000'
+// Same origin — FastAPI serves both the UI and the API on one port
+const API_BASE = ''
 
 function App() {
   // Which mode is active: "ask", "study-guide", or "upload"
@@ -66,9 +66,7 @@ function App() {
 
       setSources(data.sources || [])
     } catch (err) {
-      setError(
-        'Could not reach the backend. Make sure FastAPI is running at http://127.0.0.1:8000'
-      )
+      setError('Could not reach the server. Make sure FastAPI is running.')
       console.error(err)
     } finally {
       setLoading(false)
@@ -107,9 +105,7 @@ function App() {
       setSelectedFile(null)
       event.target.reset()
     } catch (err) {
-      setError(
-        'Upload failed. Make sure FastAPI is running at http://127.0.0.1:8000'
-      )
+      setError('Upload failed. Make sure FastAPI is running.')
       console.error(err)
     } finally {
       setLoading(false)

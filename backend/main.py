@@ -1,13 +1,18 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from pathlib import Path
+import shutil
+
+from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+
 from backend.ingest import ingest_all_notes
 from backend.ingest import extract_pdf_text
 from backend.search import search_chunks
 from backend.vector_store import add_chunks_to_chroma, semantic_search
 from backend.rag import answer_question, generate_study_guide
-from fastapi.middleware.cors import CORSMiddleware
-import shutil
-from fastapi import UploadFile, File
+
+FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend" / "dist"
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -17,6 +22,7 @@ async def lifespan(app: FastAPI):
     add_chunks_to_chroma()
 
     print(f"Knowledge base ready with {len(chunks)} chunks.")
+    print("Open StudyBuddy at http://127.0.0.1:8000")
 
     yield
 
@@ -40,11 +46,6 @@ def chunk_text(text):
         if cleaned != "":
             chunks.append(cleaned)
     return chunks
-
-# main route 
-@app.get("/")
-def root():
-    return {"message": "StudyBuddy is running!"}
 
 # reads txt files 
 @app.get("/note")
@@ -137,3 +138,19 @@ async def upload_file(file: UploadFile = File(...)):
         "filename": file.filename,
         "num_chunks": len(chunks)
     }
+
+
+# Serve the React app from frontend/dist (API routes above take priority)
+if FRONTEND_DIR.is_dir():
+    app.mount(
+        "/",
+        StaticFiles(directory=FRONTEND_DIR, html=True),
+        name="frontend",
+    )
+else:
+    @app.get("/")
+    def root():
+        return {
+            "message": "StudyBuddy API is running!",
+            "hint": "Build the frontend first: cd frontend && npm install && npm run build",
+        }
