@@ -133,6 +133,7 @@ You should now be able to:
 
 ## Future Improvements
 
+* Upload many file types
 * Flashcard generation
 * Quiz generation
 * User authentication
