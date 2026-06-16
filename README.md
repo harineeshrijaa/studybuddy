@@ -142,5 +142,3 @@ You should now be able to:
 * Multi-document knowledge bases
 
 ---
-
-Built to explore modern AI application development using Retrieval-Augmented Generation (RAG), vector databases, LLMs, and full-stack web technologies.
