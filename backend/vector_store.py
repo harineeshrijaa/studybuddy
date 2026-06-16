@@ -31,7 +31,7 @@ def add_chunks_to_chroma():
     return len(chunks)
 
 
-def semantic_search(query, num_results=1):
+def semantic_search(query, num_results=5):
     collection = get_collection()
     results = collection.query(
         query_texts=[query],

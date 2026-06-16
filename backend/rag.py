@@ -21,6 +21,13 @@ Answer the user's question using ONLY the context below.
 If the answer is not in the context, say:
 "I don't know based on your notes yet."
 
+Formatting rules:
+- Do not use markdown.
+- Do not use **bold**.
+- Use plain text.
+- Use simple bullet points beginning with '-'.
+- Keep answers easy to read.
+
 Context:
 {context}
 
@@ -64,6 +71,13 @@ Rules:
 - If the notes do not contain enough information, say what is missing.
 - Keep the explanation clear and organized.
 - Do not assume the topic is about programming unless the notes show that.
+
+Formatting rules:
+- Do not use markdown.
+- Do not use **bold**.
+- Use plain text.
+- Use simple bullet points beginning with '-'.
+- Keep answers easy to read.
 
 Notes:
 {context}

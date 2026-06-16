@@ -1,142 +1,167 @@
 [
     {
         "id": 0,
-        "text": "# AWS Certified AI Practitioner (AIF-C01) Study Guide\n# Core Services & High-Yield Exam Catchphrases",
+        "text": "# AWS Certified AI Practitioner (AIF-C01) Study Guide # Core Services & High-Yield Exam Catchphrases ======================================================================== 1. FLAGSHIP AI PLATFORMS (THE BIG TWO) ======================================================================== * Amazon Bedrock - Core Purpose: Serverless platform to access pre-trained Foundation Models (FMs) like Anthropic Claude, Meta Llama, and Amazon Nova/Titan via a single unified API. - Exam Catchphrases: * \"Minimal operational overhead\" * \"Serverless access to existing pre-built LLMs\" * \"Deploy a generative AI RAG agent quickly using company text logs\" * Amazon SageMaker AI - Core Purpose: A comprehensive end-to-end environment to build, custom-train, tune, and deploy your own machine learning models from scratch. - Exam Catchphrases: * \"Full control over the model lifecycle\" * \"Train custom machine learning algorithms on proprietary data\"",
         "source": "data/aws.txt"
     },
     {
         "id": 1,
-        "text": "========================================================================\n1. FLAGSHIP AI PLATFORMS (THE BIG TWO)\n========================================================================",
+        "text": "own machine learning models from scratch. - Exam Catchphrases: * \"Full control over the model lifecycle\" * \"Train custom machine learning algorithms on proprietary data\" * \"Hyperparameter tuning, data labeling, and custom model deployments\" --- CRUCIAL SUB-FEATURES TO KNOW --- * SageMaker Canvas: Built for business analysts. Allows you to build ML models and predict outcomes using a visual, 100% code-free interface. * SageMaker JumpStart: A built-in hub inside SageMaker to browse, test, and deploy pre-trained open-source models with a single click. * SageMaker Clarify: Provides model explainability (answers \"why did the model make this choice?\") and uncovers underlying biases in datasets. * Bedrock Guardrails: Implements responsible AI boundaries by blocking specific toxic keywords, filtering inputs, or masking hidden PII",
         "source": "data/aws.txt"
     },
     {
         "id": 2,
-        "text": "* Amazon Bedrock\n  - Core Purpose: Serverless platform to access pre-trained Foundation Models (FMs) like Anthropic Claude, Meta Llama, and Amazon Nova/Titan via a single unified API.\n  - Exam Catchphrases:\n    * \"Minimal operational overhead\"\n    * \"Serverless access to existing pre-built LLMs\"\n    * \"Deploy a generative AI RAG agent quickly using company text logs\"",
+        "text": "choice?\") and uncovers underlying biases in datasets. * Bedrock Guardrails: Implements responsible AI boundaries by blocking specific toxic keywords, filtering inputs, or masking hidden PII (like SSNs). ======================================================================== 2. GENERATIVE AI ASSISTANTS (AMAZON Q) ======================================================================== * Amazon Q Business - Core Purpose: An AI assistant connected directly to your internal enterprise systems to chat, summarize, and write reports using internal company documents. - Exam Catchphrases: * \"Enterprise knowledge assistant\" * \"Sync with internal wikis, S3 buckets, Salesforce, or Slack\" * \"Ask questions about internal corporate travel policy or HR wikis\" * Amazon Q Developer - Core Purpose: An AI assistant designed explicitly to answer software development questions, write code, run line-by-line debugging, and handle migrations. - Exam Catchphrases: * \"AI",
         "source": "data/aws.txt"
     },
     {
         "id": 3,
-        "text": "* Amazon SageMaker AI\n  - Core Purpose: A comprehensive end-to-end environment to build, custom-train, tune, and deploy your own machine learning models from scratch.\n  - Exam Catchphrases:\n    * \"Full control over the model lifecycle\"\n    * \"Train custom machine learning algorithms on proprietary data\"\n    * \"Hyperparameter tuning, data labeling, and custom model deployments\"",
+        "text": "Core Purpose: An AI assistant designed explicitly to answer software development questions, write code, run line-by-line debugging, and handle migrations. - Exam Catchphrases: * \"AI coding companion inside the IDE or code editor\" * \"Automatically generate unit tests\" * \"Explain complex or legacy code structures to developers\" ======================================================================== 3. PRE-TRAINED LANGUAGE & NATURAL LANGUAGE PROCESSING (NLP) ======================================================================== * Amazon Comprehend - Core Purpose: An NLP service that extracts insights, trends, patterns, and emotional undertones from raw, unorganized textual documentation. - Exam Catchphrases: * \"Customer product review sentiment analysis\" * \"Detect positive, negative, or neutral phrasing in customer text\" * \"Automatically group customer support tickets by topic or issue\" * Amazon Textract - Core Purpose: A computer vision service that treats",
         "source": "data/aws.txt"
     },
     {
         "id": 4,
-        "text": "--- CRUCIAL SUB-FEATURES TO KNOW ---\n* SageMaker Canvas: Built for business analysts. Allows you to build ML models and predict outcomes using a visual, 100% code-free interface.\n* SageMaker JumpStart: A built-in hub inside SageMaker to browse, test, and deploy pre-trained open-source models with a single click.\n* SageMaker Clarify: Provides model explainability (answers \"why did the model make this choice?\") and uncovers underlying biases in datasets.\n* Bedrock Guardrails: Implements responsible AI boundaries by blocking specific toxic keywords, filtering inputs, or masking hidden PII (like SSNs).",
+        "text": "in customer text\" * \"Automatically group customer support tickets by topic or issue\" * Amazon Textract - Core Purpose: A computer vision service that treats documents as structures, isolating and pulling tables, fields, or checkboxes from scanned PDFs or photos. - Exam Catchphrases: * \"Read scanned tax documents, invoices, or medical forms\" * \"Extract rows and columns from physical invoice images without manual input\" * \"Eliminate manual paper data-entry queues\" * Amazon Translate - Core Purpose: A deep learning translation engine providing accurate, localized text processing across global languages. - Exam Catchphrases: * \"Real-time multi-language customer chat translation\" * \"Translate standard website layouts automatically for regional users\" * Amazon Kendra - Core Purpose: An intelligent natural language search index that",
         "source": "data/aws.txt"
     },
     {
         "id": 5,
-        "text": "========================================================================\n2. GENERATIVE AI ASSISTANTS (AMAZON Q)\n========================================================================",
+        "text": "customer chat translation\" * \"Translate standard website layouts automatically for regional users\" * Amazon Kendra - Core Purpose: An intelligent natural language search index that crawls multiple separated file systems to find matching target documents. - Exam Catchphrases: * \"Intelligent natural language keyword index search\" * \"Search across isolated enterprise file servers and local drives\" * NOTE: If generating an answer, choose Q Business. If locating a file, choose Kendra. ======================================================================== 4. SPEECH & CONVERSATIONAL AI ======================================================================== * Amazon Transcribe - Core Purpose: An Automatic Speech Recognition (ASR) system that converts audio formats into readable, timestamped text files. - Exam Catchphrases: * \"Convert recorded customer audio calls to text transcripts\" * \"Generate closed captioning files for video media\" * \"Ingest",
         "source": "data/aws.txt"
     },
     {
         "id": 6,
-        "text": "* Amazon Q Business\n  - Core Purpose: An AI assistant connected directly to your internal enterprise systems to chat, summarize, and write reports using internal company documents.\n  - Exam Catchphrases:\n    * \"Enterprise knowledge assistant\"\n    * \"Sync with internal wikis, S3 buckets, Salesforce, or Slack\"\n    * \"Ask questions about internal corporate travel policy or HR wikis\"",
+        "text": "timestamped text files. - Exam Catchphrases: * \"Convert recorded customer audio calls to text transcripts\" * \"Generate closed captioning files for video media\" * \"Ingest call center phone streams for text sentiment evaluations\" * Amazon Polly - Core Purpose: A natural-sounding text-to-speech engine that converts written articles and copy into streaming vocal tracks. - Exam Catchphrases: * \"Generate lifelike spoken audio tracks from static text\" * \"Add audio narrator features directly into mobile apps\" * \"Power interactive IVR automated customer calling voice paths\" * Amazon Lex - Core Purpose: The conversational build kit that interprets intent using speech and text inputs (uses the same engine powering Amazon Alexa). - Exam Catchphrases: * \"Build automated self-service conversational chatbots\" * \"Create automated",
         "source": "data/aws.txt"
     },
     {
         "id": 7,
-        "text": "* Amazon Q Developer\n  - Core Purpose: An AI assistant designed explicitly to answer software development questions, write code, run line-by-line debugging, and handle migrations.\n  - Exam Catchphrases:\n    * \"AI coding companion inside the IDE or code editor\"\n    * \"Automatically generate unit tests\"\n    * \"Explain complex or legacy code structures to developers\"",
+        "text": "intent using speech and text inputs (uses the same engine powering Amazon Alexa). - Exam Catchphrases: * \"Build automated self-service conversational chatbots\" * \"Create automated banking, booking, or scheduling text agents\" * \"Handle initial level-0 support phone and chat workflows\" ======================================================================== 5. COMPUTER VISION & SPECIALIZED BUSINESS INSIGHTS ======================================================================== * Amazon Rekognition - Core Purpose: An advanced computer vision platform to analyze, classify, and isolate items, landmarks, facial geometries, or text across photos and video clips. - Exam Catchphrases: * \"Detect explicit, inappropriate, or unsafe user-uploaded images\" * \"Facial mapping authentication or verification systems\" * \"Catalog specific objects, tracking tags, and products within video feeds\" * Amazon Personalize - Core Purpose: A prediction engine that tracks browser paths and user",
         "source": "data/aws.txt"
     },
     {
         "id": 8,
-        "text": "========================================================================\n3. PRE-TRAINED LANGUAGE & NATURAL LANGUAGE PROCESSING (NLP)\n========================================================================",
+        "text": "\"Catalog specific objects, tracking tags, and products within video feeds\" * Amazon Personalize - Core Purpose: A prediction engine that tracks browser paths and user activities to build custom item layouts, suggestions, and tailored recommendations. - Exam Catchphrases: * \"Curate personalized product recommendations (e-commerce storefronts)\" * \"Amazon-style 'recommended for you' boxes or custom landing pages\" * Amazon Forecast - Core Purpose: A statistical tool used to project future sequences based on patterns found within historical time-series datasets. - Exam Catchphrases: * \"Predict inventory demand curves for upcoming fiscal quarters\" * \"Forecast retail supply needs based on historical parameters\" ======================================================================== \ud83d\udca1 QUICK-SELECTION MENTAL MODEL FOR EXAM DAY ======================================================================== \u2022 If the question calls for a solution with \"minimal operational overhead,\" \"fast",
         "source": "data/aws.txt"
     },
     {
         "id": 9,
-        "text": "* Amazon Comprehend\n  - Core Purpose: An NLP service that extracts insights, trends, patterns, and emotional undertones from raw, unorganized textual documentation.\n  - Exam Catchphrases:\n    * \"Customer product review sentiment analysis\"\n    * \"Detect positive, negative, or neutral phrasing in customer text\"\n    * \"Automatically group customer support tickets by topic or issue\"",
+        "text": "on historical parameters\" ======================================================================== \ud83d\udca1 QUICK-SELECTION MENTAL MODEL FOR EXAM DAY ======================================================================== \u2022 If the question calls for a solution with \"minimal operational overhead,\" \"fast deployment,\" or \"no formal ML expertise\" -> Default to Amazon Bedrock or a managed service (Comprehend, Rekognition, Textract, etc.). \u2022 If the prompt explicitly mentions \"maximum granular control,\" \"custom feature engineering,\" \"building custom models,\" or \"tuning proprietary underlying code algorithms\" -> Your absolute answer is Amazon SageMaker AI.",
         "source": "data/aws.txt"
     },
     {
         "id": 10,
-        "text": "* Amazon Textract\n  - Core Purpose: A computer vision service that treats documents as structures, isolating and pulling tables, fields, or checkboxes from scanned PDFs or photos.\n  - Exam Catchphrases:\n    * \"Read scanned tax documents, invoices, or medical forms\"\n    * \"Extract rows and columns from physical invoice images without manual input\"\n    * \"Eliminate manual paper data-entry queues\"",
-        "source": "data/aws.txt"
+        "text": "Python Data Structures & LeetCode Foundations A Quick-Reference Guide for Technical Interviews and Algorithm Design 1. BIG-O COMPLEXITY QUICK REFERENCE In technical interviews, your initial solution must always be evaluated for time and space scalability. Memory allocation and runtime speeds are measured across asymptotic constraints: Notation Classification Common LeetCode Context / Trigger Patterns O(1) Constant Hash map lookups, array index access, mathematical equations, push/pop to stack. O(log N) Logarithmic Binary Search, searching or balancing elements in a binary search tree (BST), heaps. O(N) Linear Single pass over an array/string, linear scan, sliding window, tree traversal (BFS/DFS). O(N log N) Linearithmic Sorting standard collections (Python's Timsort via .sort() or sorted()), heap sorts. O(N\u00b2) Quadratic Nested iterations over a collection, checking all",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 11,
-        "text": "* Amazon Translate\n  - Core Purpose: A deep learning translation engine providing accurate, localized text processing across global languages.\n  - Exam Catchphrases:\n    * \"Real-time multi-language customer chat translation\"\n    * \"Translate standard website layouts automatically for regional users\"",
-        "source": "data/aws.txt"
+        "text": "(BFS/DFS). O(N log N) Linearithmic Sorting standard collections (Python's Timsort via .sort() or sorted()), heap sorts. O(N\u00b2) Quadratic Nested iterations over a collection, checking all unique pairs (brute-force arrays). O(2^N) Exponential Generating combinations, raw combinatorial subsets, unoptimized recursive fibonacci. 2. CORE PYTHON DATA STRUCTURES A. Lists (Dynamic Arrays) Python lists are continuous blocks of memory allocated dynamically behind the scenes. Inserting or removing from the end is fast, but operations at the front require shuffling elements down the chain. Operation Code Time Complexity Interview Mechanics / Notes arr.append(val) O(1) Appends value to the right-hand end. Amortized constant time. arr.pop() O(1) Removes and returns the rightmost element. arr.insert(0, val) O(N) Worst-case. Shifts all elements rightward by 1 index. Avoid in loops.",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 12,
-        "text": "* Amazon Kendra\n  - Core Purpose: An intelligent natural language search index that crawls multiple separated file systems to find matching target documents.\n  - Exam Catchphrases:\n    * \"Intelligent natural language keyword index search\"\n    * \"Search across isolated enterprise file servers and local drives\"\n    * NOTE: If generating an answer, choose Q Business. If locating a file, choose Kendra.",
-        "source": "data/aws.txt"
+        "text": "Amortized constant time. arr.pop() O(1) Removes and returns the rightmost element. arr.insert(0, val) O(N) Worst-case. Shifts all elements rightward by 1 index. Avoid in loops. arr[i] O(1) Direct address access via index lookup. # Implementation Snippet arr = [1, 2, 3] arr.append(4) # [1, 2, 3, 4] last = arr.pop() # last = 4, arr = [1, 2, 3] Data Structures & LeetCode Foundations \u2014 Technical Interview Prep Page 1 B. Deque (Double-Ended Queues / Stacks / Queues) When you need to implement a true Queue (FIFO) or a Stack (LIFO) with fast operations at both boundaries, utilize collections.deque. It uses a doubly-linked list infrastructure internally. Operation Code Time Complexity Interview Mechanics / Notes q.append(val) O(1) Pushes value onto the",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 13,
-        "text": "========================================================================\n4. SPEECH & CONVERSATIONAL AI\n========================================================================",
-        "source": "data/aws.txt"
+        "text": "both boundaries, utilize collections.deque. It uses a doubly-linked list infrastructure internally. Operation Code Time Complexity Interview Mechanics / Notes q.append(val) O(1) Pushes value onto the right side. q.appendleft(val) O(1) Pushes value onto the front left boundary. Perfect for Queue management. q.popleft() O(1) Removes and returns the leftmost item. Critical for BFS traversals. from collections import deque queue = deque([2, 3]) queue.append(4) # deque([2, 3, 4]) first = queue.popleft() # first = 2, queue = deque([3, 4]) C. Dictionaries & Sets (Hash Maps & Hash Sets) The single most powerful tool in LeetCode algorithms. Python uses hash functions to map keys directly to internal index arrays, enabling near-instantaneous searches. Operation Code Time Complexity Interview Mechanics / Notes d[key] = val O(1)",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 14,
-        "text": "* Amazon Transcribe\n  - Core Purpose: An Automatic Speech Recognition (ASR) system that converts audio formats into readable, timestamped text files.\n  - Exam Catchphrases:\n    * \"Convert recorded customer audio calls to text transcripts\"\n    * \"Generate closed captioning files for video media\"\n    * \"Ingest call center phone streams for text sentiment evaluations\"",
-        "source": "data/aws.txt"
+        "text": "hash functions to map keys directly to internal index arrays, enabling near-instantaneous searches. Operation Code Time Complexity Interview Mechanics / Notes d[key] = val O(1) Inserts key-value mapping into hash bucket locations. if key in d: O(1) Instant check for item existence. Avoids nested scans. s.add(val) O(1) Inserts element into a set. Ensures all entries are unique. # Frequency Counter Pattern counts = {} for char in \"abbc\": counts[char] = counts.get(char, 0) + 1 # {'a': 1, 'b': 2, 'c': 1} D. Heaps (Priority Queues) Python provides a min-heap structure natively via the heapq module. The smallest item always sits at index 0. heapq.heappush(heap, val): Inserts element, auto-balancing in O(log N). heapq.heappop(heap): Extracts the minimum value in O(log N). Max-Heap",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 15,
-        "text": "* Amazon Polly\n  - Core Purpose: A natural-sounding text-to-speech engine that converts written articles and copy into streaming vocal tracks.\n  - Exam Catchphrases:\n    * \"Generate lifelike spoken audio tracks from static text\"\n    * \"Add audio narrator features directly into mobile apps\"\n    * \"Power interactive IVR automated customer calling voice paths\"",
-        "source": "data/aws.txt"
+        "text": "The smallest item always sits at index 0. heapq.heappush(heap, val): Inserts element, auto-balancing in O(log N). heapq.heappop(heap): Extracts the minimum value in O(log N). Max-Heap Trick: Invert your numeric entries to negative values (e.g., store -val) when pushed, then invert back upon extraction. \u2022 \u2022 \u2022 Data Structures & LeetCode Foundations \u2014 Technical Interview Prep Page 2 3. ESSENTIAL LEETCODE PATTERNS & SCAFFOLDING A. Two-Pointer Approach (Array Sort / Target Sum) Used to find pairs or sections in a sorted array by moving pointers from both ends inward, minimizing duplicate iterations. def two_sum_sorted(nums: list[int], target: int) -> list[int]: left, right = 0, len(nums) - 1 while left < right: current_sum = nums[left] + nums[right] if current_sum == target: return [left,",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 16,
-        "text": "* Amazon Lex\n  - Core Purpose: The conversational build kit that interprets intent using speech and text inputs (uses the same engine powering Amazon Alexa).\n  - Exam Catchphrases:\n    * \"Build automated self-service conversational chatbots\"\n    * \"Create automated banking, booking, or scheduling text agents\"\n    * \"Handle initial level-0 support phone and chat workflows\"",
-        "source": "data/aws.txt"
+        "text": "int) -> list[int]: left, right = 0, len(nums) - 1 while left < right: current_sum = nums[left] + nums[right] if current_sum == target: return [left, right] elif current_sum < target: left += 1 # Need a larger number else: right -= 1 # Need a smaller number return [] B. Depth-First Search (DFS) on Binary Trees Explores a path completely down to its leaf nodes recursively before backtracking to adjacent paths. Excellent for tree validations. class TreeNode: def __init__(self, val=0, left=None, right=None): self.val = val self.left = left self.right = right def max_depth(root: TreeNode) -> int: if not root: return 0 left_side = max_depth(root.left) right_side = max_depth(root.right) return max(left_side, right_side) + 1 C. Breadth-First Search (BFS) on Graphs / Trees",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 17,
-        "text": "========================================================================\n5. COMPUTER VISION & SPECIALIZED BUSINESS INSIGHTS\n========================================================================",
-        "source": "data/aws.txt"
+        "text": "int: if not root: return 0 left_side = max_depth(root.left) right_side = max_depth(root.right) return max(left_side, right_side) + 1 C. Breadth-First Search (BFS) on Graphs / Trees Explores nodes level by level horizontally. Indispensable for tracking the shortest path across unweighted structures. Data Structures & LeetCode Foundations \u2014 Technical Interview Prep Page 3 def level_order_traversal(root: TreeNode) -> list[list[int]]: if not root: return [] result = [] queue = deque([root]) while queue: level_size = len(queue) current_level = [] for _ in range(level_size): node = queue.popleft() current_level.append(node.val) if node.left: queue.append(node.left) if node.right: queue.append(node.right) result.append(current_level) return result \ud83d\udca1 Professional Interview Coding Strategies Clarify Constraints First: Ask about input size boundaries (e.g., \"Can $N$ be zero? Are negative values possible?\"). This signals your logic tracks edge",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 18,
-        "text": "* Amazon Rekognition\n  - Core Purpose: An advanced computer vision platform to analyze, classify, and isolate items, landmarks, facial geometries, or text across photos and video clips.\n  - Exam Catchphrases:\n    * \"Detect explicit, inappropriate, or unsafe user-uploaded images\"\n    * \"Facial mapping authentication or verification systems\"\n    * \"Catalog specific objects, tracking tags, and products within video feeds\"",
-        "source": "data/aws.txt"
+        "text": "Coding Strategies Clarify Constraints First: Ask about input size boundaries (e.g., \"Can $N$ be zero? Are negative values possible?\"). This signals your logic tracks edge cases natively. State Complexities Before Writing: Explicitly mention: \"I can solve this via a hash table tracking approach in $O(N)$ time and $O(N)$ auxiliary space.\" Dry-Run Code Manually: Before declaring completion, walk your interviewer through an example input array using step-by-step index tracer tracking out loud. \u2022 \u2022 \u2022 Data Structures & LeetCode Foundations \u2014 Technical Interview Prep Page 4",
+        "source": "data/python_basics.pdf"
     },
     {
         "id": 19,
-        "text": "* Amazon Personalize\n  - Core Purpose: A prediction engine that tracks browser paths and user activities to build custom item layouts, suggestions, and tailored recommendations.\n  - Exam Catchphrases:\n    * \"Curate personalized product recommendations (e-commerce storefronts)\"\n    * \"Amazon-style 'recommended for you' boxes or custom landing pages\"",
-        "source": "data/aws.txt"
+        "text": "Python lists are ordered collections that can store multiple values. Python dictionaries store key-value pairs and are similar to Java HashMaps. Python strings are immutable, meaning they cannot be changed after creation.",
+        "source": "data/python_basics.txt"
     },
     {
         "id": 20,
-        "text": "* Amazon Forecast\n  - Core Purpose: A statistical tool used to project future sequences based on patterns found within historical time-series datasets.\n  - Exam Catchphrases:\n    * \"Predict inventory demand curves for upcoming fiscal quarters\"\n    * \"Forecast retail supply needs based on historical parameters\"",
-        "source": "data/aws.txt"
+        "text": "AWS Certified AI Practitioner (AIF-C01) Ultimate AI/ML Services Ultimate Cheat Sheet & Exam Pass Guide 1. THE PILLARS OF AWS GENAI & MACHINE LEARNING The exam strictly tests your ability to distinguish between serverless Foundation Model architectures and managed custom lifecycle training platforms. Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Bedrock A fully managed, serverless service that exposes high-performing third-party & AWS Foundation Models (FMs) (Claude, Llama, Mistral, Command, Nova) via a single unified API endpoint. No infrastructure to manage. \u2022 Serverless application deployment \u2022 No ML experience required \u2022 Customizing existing models using Fine-Tuning or Retrieval-Augmented Generation (RAG) \u2022 Continuous pre-training on unlabeled data Amazon SageMaker AI A comprehensive, modular platform for data scientists to",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 21,
-        "text": "========================================================================\n\ud83d\udca1 QUICK-SELECTION MENTAL MODEL FOR EXAM DAY\n========================================================================\n\u2022 If the question calls for a solution with \"minimal operational overhead,\" \"fast deployment,\" or \"no formal ML expertise\" -> Default to Amazon Bedrock or a managed service (Comprehend, Rekognition, Textract, etc.).\n\u2022 If the prompt explicitly mentions \"maximum granular control,\" \"custom feature engineering,\" \"building custom models,\" or \"tuning proprietary underlying code algorithms\" -> Your absolute answer is Amazon SageMaker AI.",
-        "source": "data/aws.txt"
+        "text": "existing models using Fine-Tuning or Retrieval-Augmented Generation (RAG) \u2022 Continuous pre-training on unlabeled data Amazon SageMaker AI A comprehensive, modular platform for data scientists to build, train, optimize, and deploy custom ML models from scratch using arbitrary open-source libraries or custom algorithms. \u2022 Total infrastructure Granular Control \u2022 Creating custom training jobs or processing pipelines \u2022 Hyperparameter optimization (HPO) tuning \u2022 Deep feature engineering, artifact logging, and container instances High-Yield Bedrock & SageMaker Sub-Features (Must Know) Amazon Bedrock Guardrails: Implements governance and user safeguards. Triggers: Responsible AI, filtering toxic input, stripping Personally Identifiable Information (PII), preventing hallucinations, and creating model safety alignment boundaries. SageMaker Canvas: A visual graphical UI tool. Triggers: Build ML models and run predictions without writing a",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 22,
-        "text": "Python lists are ordered collections that can store multiple values.",
-        "source": "data/python_basics.txt"
+        "text": "preventing hallucinations, and creating model safety alignment boundaries. SageMaker Canvas: A visual graphical UI tool. Triggers: Build ML models and run predictions without writing a single line of code; visual workflow for business analysts. SageMaker Clarify: Bias and explainability service. Triggers: Checking datasets for pre-training/post-training bias, answering why a model reached a specific decision (explainability), drift alerts. SageMaker JumpStart: An internal library hub. Triggers: Quickly deploy popular pre-trained models or architectures directly inside private SageMaker environment boundaries. 2. AWS GENERATIVE AI ASSISTANTS & AGENTS Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Q Business An AI conversational assistant that links to internal organizational data stores to index files, synthesize answers, and construct textual materials securely. \u2022 Enterprise",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 23,
-        "text": "Python dictionaries store key-value pairs and are similar to Java HashMaps.",
-        "source": "data/python_basics.txt"
+        "text": "Q Business An AI conversational assistant that links to internal organizational data stores to index files, synthesize answers, and construct textual materials securely. \u2022 Enterprise knowledge assistant \u2022 Indexing corporate wikis, internal S3, Slack, or Salesforce \u2022 Answering employee questions regarding internal business policy documents AWS Certified AI Practitioner (AIF-C01) Study Guide Page 1 Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Q Developer An AI assistant tuned directly for technical engineering pipelines. Integrates with your command line and your IDE interface to modify, refactor, generate, or query programming files. \u2022 AI coding companion \u2022 Generating automatic unit test coverage blocks \u2022 Scanning software lines for security flaws \u2022 Explaining legacy architectural frameworks (e.g., old Java structures)",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 24,
-        "text": "Python strings are immutable, meaning they cannot be changed after creation.",
-        "source": "data/python_basics.txt"
+        "text": "coding companion \u2022 Generating automatic unit test coverage blocks \u2022 Scanning software lines for security flaws \u2022 Explaining legacy architectural frameworks (e.g., old Java structures) Amazon CodeWhispererThe legacy name for the IDE-based code generation tooling. \u2022 Note: If listed, it is now part of Amazon Q Developer. Focus on Q Developer for coding contexts. 3. PRE-TRAINED LANGUAGE, TEXT, & EXTRACTION SERVICES These are managed turnkey services. They require **zero ML training** or model deployment; you simply pass data to an API. Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Comprehend Advanced Natural Language Processing (NLP) designed to unearth semantic intelligence from raw, messy text corpora. \u2022 Tracking sentiment analysis (positive/negative/ neutral feedback) \u2022 Extracting key physical entities,",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 25,
-        "text": "In Python, enumerate is useful when you need both the index and value while looping.",
-        "source": "data/leetcode.txt"
+        "text": "Language Processing (NLP) designed to unearth semantic intelligence from raw, messy text corpora. \u2022 Tracking sentiment analysis (positive/negative/ neutral feedback) \u2022 Extracting key physical entities, syntax groups, or locations \u2022 Redacting sensitive personal variables automatically from logs Amazon Textract An intelligent extraction program that converts scanned documents or image layouts into digital machine-readable text arrays. \u2022 Pulling structured keys, values, tables, and form inputs from PDFs \u2022 Isolating lines from medical claims, invoices, or manual logbooks \u2022 Processing handwritten data fields without human entries Amazon Translate A fast neural machine translation system optimized for multi-language localizations. \u2022 Converting standard asset blocks into localized regional scripts \u2022 Real-time chat stream translation for international service desks Amazon Kendra An intelligent corporate search",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 26,
-        "text": "A while loop is useful when you need to manually control the index, such as skipping characters.",
-        "source": "data/leetcode.txt"
+        "text": "localizations. \u2022 Converting standard asset blocks into localized regional scripts \u2022 Real-time chat stream translation for international service desks Amazon Kendra An intelligent corporate search platform powered behind the scenes by ML to scan siloed indexing systems using natural queries. \u2022 Natural language semantic search index \u2022 Finding the target document matching user queries across isolated file shares \u2022 Exam Trap: Kendra locates documents; Q Business explicitly chats/summarizes them. 4. AUDIO, VIDEO, & CONVERSATIONAL AI SERVICES Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Transcribe Converts speech streams and audio payloads directly into formatted text documents via Automatic Speech Recognition (ASR). \u2022 Speech-to-text conversion \u2022 Generating structural timestamps or closed captions for videos \u2022 Processing phone recording",
+        "source": "data/AWS_AI_services.pdf"
     },
     {
         "id": 27,
-        "text": "Dictionaries are commonly used for frequency counting in LeetCode problems.",
+        "text": "into formatted text documents via Automatic Speech Recognition (ASR). \u2022 Speech-to-text conversion \u2022 Generating structural timestamps or closed captions for videos \u2022 Processing phone recording payloads from call center storage buckets AWS Certified AI Practitioner (AIF-C01) Study Guide Page 2 Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Polly Converts written strings and articles into hyper-realistic, streaming vocal files via Text-to-Speech (TTS) architecture. \u2022 Text-to-speech engine \u2022 Synthesizing spoken audio output for informational applications \u2022 Utilizing Speech Synthesis Markup Language (SSML) for pacing/breathing Amazon Lex A tool to engineer transactional interfaces using voice or chat inputs. Powered by the deep engine that drives Amazon Alexa. \u2022 Building automated conversational chatbots \u2022 Managing interactions using slots, intents, and",
+        "source": "data/AWS_AI_services.pdf"
+    },
+    {
+        "id": 28,
+        "text": "voice or chat inputs. Powered by the deep engine that drives Amazon Alexa. \u2022 Building automated conversational chatbots \u2022 Managing interactions using slots, intents, and prompts \u2022 Front-ending Level-0 support call routing paths automatically Amazon Rekognition A computer vision pipeline that automatically isolates items, face models, activities, tracking tags, text lines, or objects across images/videos. \u2022 Content moderation (flagging explicit/unsafe user uploads) \u2022 Biometric facial detection, confirmation, or indexing \u2022 Identifying specific items, text plates, or physical hazards in clips 5. PREDICTIVE ANALYTICS & SPECIALIZED DECISION TOOLS Service Name What It Does (Core Architecture)Exam-Triggers & High-Yield Keywords Amazon Personalize A recommendation system powered by deep learning frameworks that tracks user paths and interactions to generate individualized product arrays. \u2022 Real-time",
+        "source": "data/AWS_AI_services.pdf"
+    },
+    {
+        "id": 29,
+        "text": "High-Yield Keywords Amazon Personalize A recommendation system powered by deep learning frameworks that tracks user paths and interactions to generate individualized product arrays. \u2022 Real-time digital personalization engine \u2022 Building Amazon-style \"Frequently bought together\" or recommendation cards \u2022 Altering retail app displays based on historical click patterns Amazon Forecast A statistical prediction engine engineered to process complex historical time-series datasets to map future numerical expectations. \u2022 Time-series data forecasting \u2022 Estimating upcoming inventory demand metrics, power draw, or parts usage \u2022 Anticipating seasonal workforce resource demands accurately Amazon Fraud DetectorA highly automated tool that evaluates transactions or account events to isolate malicious actions or fraudulent entries. \u2022 Catching rogue charge attempts, fake review setups, or bot account creations \u2022 Risk",
+        "source": "data/AWS_AI_services.pdf"
+    },
+    {
+        "id": 30,
+        "text": "transactions or account events to isolate malicious actions or fraudulent entries. \u2022 Catching rogue charge attempts, fake review setups, or bot account creations \u2022 Risk scoring online checkouts immediately based on historical markers \ud83e\udde0 Critical Exam-Day Architecture Decision Rules: Rule 1: If the problem description asks for an architecture requiring \"no ML expertise,\"\"pre-trained models,\" or \"minimal operational overhead,\" choose the specific specialized AI service (Comprehend, Rekognition, Textract, Translate, Bedrock). Rule 2: If the problem calls for \"complete infrastructure customization,\"\"training custom open-source scripts,\" \"tuning hyperparameters,\" or logging custom metadata variables, your destination is always Amazon SageMaker AI. Rule 3: If the prompt involves scanning enterprise internal files to build a generative conversational interface, look for Amazon Q Business. If it is",
+        "source": "data/AWS_AI_services.pdf"
+    },
+    {
+        "id": 31,
+        "text": "AI. Rule 3: If the prompt involves scanning enterprise internal files to build a generative conversational interface, look for Amazon Q Business. If it is only keyword index lookup, select Amazon Kendra. \u2022 \u2022 \u2022 AWS Certified AI Practitioner (AIF-C01) Study Guide Page 3",
+        "source": "data/AWS_AI_services.pdf"
+    },
+    {
+        "id": 32,
+        "text": "In Python, enumerate is useful when you need both the index and value while looping. A while loop is useful when you need to manually control the index, such as skipping characters. Dictionaries are commonly used for frequency counting in LeetCode problems.",
         "source": "data/leetcode.txt"
     }
 ]

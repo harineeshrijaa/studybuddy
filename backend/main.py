@@ -1,9 +1,13 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from backend.ingest import ingest_all_notes
+from backend.ingest import extract_pdf_text
 from backend.search import search_chunks
 from backend.vector_store import add_chunks_to_chroma, semantic_search
 from backend.rag import answer_question, generate_study_guide
+from fastapi.middleware.cors import CORSMiddleware
+import shutil
+from fastapi import UploadFile, File
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,6 +22,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # break into chunks 
 def chunk_text(text):
@@ -101,3 +112,28 @@ def ask(query: str):
 @app.get("/study-guide")
 def study_guide(topic: str):
     return generate_study_guide(topic)
+
+@app.get("/test-pdf")
+def test_pdf():
+
+    text = extract_pdf_text("data/AWS_AI_services.pdf")
+
+    return {
+        "preview": text[:1000]
+    }
+
+@app.post("/upload")
+async def upload_file(file: UploadFile = File(...)):
+    file_path = f"data/{file.filename}"
+
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+
+    chunks = ingest_all_notes()
+    add_chunks_to_chroma()
+
+    return {
+        "message": "File uploaded and knowledge base updated!",
+        "filename": file.filename,
+        "num_chunks": len(chunks)
+    }
